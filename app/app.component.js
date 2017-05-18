@@ -18,7 +18,8 @@ var AppComponent = (function () {
 AppComponent = __decorate([
     core_1.Component({
         selector: 'app-root',
-        template: "\n    <h2>Hello</h2>\n    <event-list></event-list> \n    "
+        template: "\n    <h2>Hello</h2>\n    <event-list></event-list> \n    ",
+        styles: ["\n    \n    .well div { color: green; }\n    "]
     }),
     __metadata("design:paramtypes", [])
 ], AppComponent);

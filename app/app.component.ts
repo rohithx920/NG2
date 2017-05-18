@@ -5,7 +5,11 @@ import { Component } from '@angular/core';
   template: `
     <h2>Hello</h2>
     <event-list></event-list> 
-    `
+    `,
+    styles:[`
+    
+    .well div { color: green; }
+    `]
 })
 export class AppComponent {
   name = 'app works!';
