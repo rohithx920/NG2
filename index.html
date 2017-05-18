@@ -14,20 +14,19 @@
     <script src="node_modules/jquery/dist/jquery.min.js"></script>
     <script src="node_modules/bootstrap/dist/js/bootstrap.js"></script>
     <script src="node_modules/zone.js/dist/zone.js"></script>
-    <script src="node_modules/reflect-metadata/Reflect.js"></script>
     <script src="node_modules/systemjs/dist/system.src.js"></script>
     
+    <script src="systemjs.config.js"></script>
     <script>
-      System.import('systemjs.config.js')
-        .then(function () { System.import('main.ts') })
-        .catch(console.error.bind(console));
-     </script>
-    <!--<script src="systemjs.config.js"></script>-->
+      System.import('app').catch(function(err){
+        console.error(err);
+      });
+    </script>
+
   </head>
   
   <body class="container">
-    <h1> This is my header</h1>
-    <app-root>Loading ...</app-root>
-     
+    <h1> Header</h1>
+    <app-root></app-root>
   </body>
 </html>
