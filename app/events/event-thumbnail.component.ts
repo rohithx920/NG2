@@ -13,21 +13,17 @@ import {Component, Input, Output, EventEmitter} from '@angular/core'
                     <span> &nbsp;</span>
                     <span>{{event.location.city}}, {{event.location.country}}</span>
                 </div>
-                <div>
-                <button class="btn btn-primary" (click)='ClickedOnMe()'>Click Me!!</button> 
-                </div>
+                
     </div>
 
     `
 })
 export class EventThumbnailComponent{
    @Input() event:any;
-   @Output() eventClick =new EventEmitter();
-   ClickedOnMe(){
-        console.log('Button clicked');
-        this.eventClick.emit('foo');
+   //public properties 
+   someProperty:any="someValue";
+   showFoo(){
+       console.log("foo");
    }
-   handleEventClicked(data){
-        console.log('received'+data);
-   }
+   
 }

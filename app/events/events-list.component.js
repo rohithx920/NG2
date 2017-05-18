@@ -25,9 +25,6 @@ var EventsListComponent = (function () {
             }
         };
     }
-    EventsListComponent.prototype.handleEventClicked = function (data) {
-        console.log('received :' + data);
-    };
     return EventsListComponent;
 }());
 EventsListComponent = __decorate([
