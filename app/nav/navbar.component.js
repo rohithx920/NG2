@@ -9,18 +9,20 @@ var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
 var core_1 = require("@angular/core");
-var AppComponent = (function () {
-    function AppComponent() {
-        this.name = 'app works!';
+var NavBarComponent = (function () {
+    function NavBarComponent() {
     }
-    return AppComponent;
+    return NavBarComponent;
 }());
-AppComponent = __decorate([
+NavBarComponent = __decorate([
     core_1.Component({
-        selector: 'app-root',
-        template: "\n    <nav-bar></nav-bar>\n    <event-list></event-list> \n    "
+        selector: 'nav-bar',
+        templateUrl: '/app/nav/navbar.component.html',
+        styles: [
+            ".nav .navbar-nav { font-size: 15px;}\n          #searchForm { margin-right: 100px;}\n          @media (max-width: 1200px){#searchForm{display:none} }\n        "
+        ]
     }),
     __metadata("design:paramtypes", [])
-], AppComponent);
-exports.AppComponent = AppComponent;
-//# sourceMappingURL=app.component.js.map
+], NavBarComponent);
+exports.NavBarComponent = NavBarComponent;
+//# sourceMappingURL=navbar.component.js.map
