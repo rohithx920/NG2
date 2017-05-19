@@ -21,7 +21,7 @@ __decorate([
 EventThumbnailComponent = __decorate([
     core_1.Component({
         selector: 'event-thumbnail',
-        template: "\n    <div class=\"well hoverwell thumbanail\">\n                <h2> {{event.name}}</h2>\n                <div> Date:{{event.date}}</div>\n                <div> Time: {{event.time}}</div>\n                <div> Price:${{event.price}}</div>\n                <div>\n                    <span>Location:{{event.location.address}}</span>\n                    <span class=\"pad-left\">{{event.location.city}}, {{event.location.country}}</span>\n                </div>\n                \n    </div>\n\n    ",
+        template: "\n    <div class=\"well hoverwell thumbanail\">\n                <h2> {{event?.name}}</h2>\n                <div> Date:{{event?.date}}</div>\n                <div> Time: {{event?.time}}</div>\n                <div> Price:${{event?.price}}</div>\n                <div>\n                    <span>Location:{{event?.location?.address}}</span>\n                    <span class=\"pad-left\">{{event?.location?.city}}, {{event?.location?.country}}</span>\n                </div>\n                \n    </div>\n\n    ",
         styles: ["\n    .thumbanail {min-height: 210px; }\n    .pad-left {margin-left:10px; }\n    .well div {color: #bbb;}\n    "]
     }),
     __metadata("design:paramtypes", [])
