@@ -24,6 +24,7 @@ var EventsListComponent = (function () {
                     city: 'London',
                     country: 'England'
                 },
+                link: "test.com",
                 sessions: [
                     {
                         id: 1,

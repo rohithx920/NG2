@@ -13,6 +13,9 @@ import {Component, Input, Output, EventEmitter} from '@angular/core'
                     <span class="pad-left">{{event?.location?.city}}, {{event?.location?.country}}</span>
                 </div>
                 
+                <div *ngIf="event?.link">Online Link: {{event?.link}}</div>
+
+                
     </div>
 
     `,

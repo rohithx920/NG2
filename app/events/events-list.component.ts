@@ -18,6 +18,7 @@ export class EventsListComponent{
         city: 'London',
         country: 'England'
       },
+      link:"test.com",
       sessions: [
         {
           id: 1,
