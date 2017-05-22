@@ -9,18 +9,22 @@ var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
 var core_1 = require("@angular/core");
-var AppComponent = (function () {
-    function AppComponent() {
-        this.name = 'app works!';
+var event_service_1 = require("../shared/event.service");
+var EventDetailsComponent = (function () {
+    function EventDetailsComponent(eventservice) {
+        this.eventservice = eventservice;
     }
-    return AppComponent;
+    EventDetailsComponent.prototype.ngOnInit = function () {
+        this.event = this.eventservice.getEvent(1);
+    };
+    return EventDetailsComponent;
 }());
-AppComponent = __decorate([
+EventDetailsComponent = __decorate([
     core_1.Component({
-        selector: 'app-root',
-        template: "\n    <nav-bar></nav-bar>\n    <router-outlet></router-outlet> \n    "
+        templateUrl: '/app/events/event-details/event-details.component.html',
+        styles: ["\n .container{ padding-left:20px; padding-right:20px }\n .event-image: {height:100px;}\n "]
     }),
-    __metadata("design:paramtypes", [])
-], AppComponent);
-exports.AppComponent = AppComponent;
-//# sourceMappingURL=app.component.js.map
+    __metadata("design:paramtypes", [event_service_1.EventService])
+], EventDetailsComponent);
+exports.EventDetailsComponent = EventDetailsComponent;
+//# sourceMappingURL=event-details.component.js.map

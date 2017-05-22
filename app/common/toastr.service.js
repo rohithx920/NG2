@@ -9,18 +9,26 @@ var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
 var core_1 = require("@angular/core");
-var AppComponent = (function () {
-    function AppComponent() {
-        this.name = 'app works!';
+var ToastService = (function () {
+    function ToastService() {
     }
-    return AppComponent;
+    ToastService.prototype.success = function (message, title) {
+        toastr["success"](message, title);
+    };
+    ToastService.prototype.info = function (message, title) {
+        toastr.info(message, title);
+    };
+    ToastService.prototype.warning = function (message, title) {
+        toastr.warning(message, title);
+    };
+    ToastService.prototype.error = function (message, title) {
+        toastr.error(message, title);
+    };
+    return ToastService;
 }());
-AppComponent = __decorate([
-    core_1.Component({
-        selector: 'app-root',
-        template: "\n    <nav-bar></nav-bar>\n    <router-outlet></router-outlet> \n    "
-    }),
+ToastService = __decorate([
+    core_1.Injectable(),
     __metadata("design:paramtypes", [])
-], AppComponent);
-exports.AppComponent = AppComponent;
-//# sourceMappingURL=app.component.js.map
+], ToastService);
+exports.ToastService = ToastService;
+//# sourceMappingURL=toastr.service.js.map
