@@ -18,10 +18,19 @@ import {ToastService} from './common/toastr.service'
 import {EventDetailsComponent} from './events/event-details/event-details.component'
 
 import {appRoutes} from './routes'
+
+import {CreateEventComponent} from './events/create-event.component'
 @NgModule({
   imports: [BrowserModule,
   RouterModule.forRoot(appRoutes)],
-  declarations: [AppComponent,EventsListComponent,EventThumbnailComponent,NavBarComponent,EventDetailsComponent ],
+  declarations: [
+    AppComponent,
+    EventsListComponent,
+    EventThumbnailComponent,
+    NavBarComponent,
+    EventDetailsComponent,
+    CreateEventComponent
+   ],
   bootstrap: [AppComponent],
   providers: [EventService,ToastService] 
 
