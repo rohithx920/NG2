@@ -41,9 +41,21 @@ AppModule = __decorate([
             _404_component_1.Error404Component
         ],
         bootstrap: [app_component_1.AppComponent],
-        providers: [event_service_1.EventService, toastr_service_1.ToastService, event_route_activator_service_1.EventRouteActivator]
+        providers: [
+            event_service_1.EventService,
+            toastr_service_1.ToastService,
+            event_route_activator_service_1.EventRouteActivator,
+            { provide: 'canDeactivateCreateEvent',
+                useValue: checkDirtyState
+            }
+        ]
     }),
     __metadata("design:paramtypes", [])
 ], AppModule);
 exports.AppModule = AppModule;
+function checkDirtyState(component) {
+    if (component.isDirty)
+        return window.confirm('You have not saved this event do you really want to cancel?? ');
+    return true;
+}
 //# sourceMappingURL=app.module.js.map
