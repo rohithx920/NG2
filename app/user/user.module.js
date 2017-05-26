@@ -9,20 +9,26 @@ var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
 var core_1 = require("@angular/core");
-var NavBarComponent = (function () {
-    function NavBarComponent() {
+var common_1 = require("@angular/common");
+var router_1 = require("@angular/router");
+var profile_component_1 = require("./profile.component");
+var user_routes_1 = require("./user.routes");
+var UserModule = (function () {
+    function UserModule() {
     }
-    return NavBarComponent;
+    return UserModule;
 }());
-NavBarComponent = __decorate([
-    core_1.Component({
-        selector: 'nav-bar',
-        templateUrl: '/app/nav/navbar.component.html',
-        styles: [
-            ".nav .navbar-nav { font-size: 15px;}\n          #searchForm { margin-right: 100px;}\n          @media (max-width: 1200px){#searchForm{display:none} }\n          li> a.active { color: #F97924;}\n        "
+UserModule = __decorate([
+    core_1.NgModule({
+        imports: [
+            common_1.CommonModule,
+            router_1.RouterModule.forChild(user_routes_1.userRoutes)
+        ],
+        declarations: [
+            profile_component_1.ProfileComponent
         ]
     }),
     __metadata("design:paramtypes", [])
-], NavBarComponent);
-exports.NavBarComponent = NavBarComponent;
-//# sourceMappingURL=navbar.component.js.map
+], UserModule);
+exports.UserModule = UserModule;
+//# sourceMappingURL=user.module.js.map
