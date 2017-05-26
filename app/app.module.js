@@ -22,6 +22,7 @@ var routes_1 = require("./routes");
 var create_event_component_1 = require("./events/create-event.component");
 var _404_component_1 = require("./errors/404.component");
 var event_route_activator_service_1 = require("./events/event-details/event-route-activator.service");
+var events_list_resolver_service_1 = require("./events/events-list-resolver.service");
 var AppModule = (function () {
     function AppModule() {
     }
@@ -45,6 +46,7 @@ AppModule = __decorate([
             event_service_1.EventService,
             toastr_service_1.ToastService,
             event_route_activator_service_1.EventRouteActivator,
+            events_list_resolver_service_1.EventListResolver,
             { provide: 'canDeactivateCreateEvent',
                 useValue: checkDirtyState
             }

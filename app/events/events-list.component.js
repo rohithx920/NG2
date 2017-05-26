@@ -11,13 +11,16 @@ var __metadata = (this && this.__metadata) || function (k, v) {
 var core_1 = require("@angular/core");
 var event_service_1 = require("./shared/event.service");
 var toastr_service_1 = require("../common/toastr.service");
+var router_1 = require("@angular/router");
 var EventsListComponent = (function () {
-    function EventsListComponent(eventService, toastr) {
+    function EventsListComponent(eventService, toastr, route) {
         this.eventService = eventService;
         this.toastr = toastr;
+        this.route = route;
     }
     EventsListComponent.prototype.ngOnInit = function () {
-        this.events = this.eventService.getEvents();
+        //this.eventService.getEvents().subscribe(events=>{this.events =events});
+        this.events = this.route.snapshot.data['events'];
     };
     EventsListComponent.prototype.handleThumbnailCLick = function (eventName) {
         this.toastr.success(eventName);
@@ -29,7 +32,7 @@ EventsListComponent = __decorate([
         //selector:'event-list',
         templateUrl: '/app/events/event-list.component.html'
     }),
-    __metadata("design:paramtypes", [event_service_1.EventService, toastr_service_1.ToastService])
+    __metadata("design:paramtypes", [event_service_1.EventService, toastr_service_1.ToastService, router_1.ActivatedRoute])
 ], EventsListComponent);
 exports.EventsListComponent = EventsListComponent;
 //# sourceMappingURL=events-list.component.js.map
